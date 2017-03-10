@@ -386,10 +386,9 @@ int Csi::get_resolution(){
 					real_lenth=real_X_SIZE_OF_FRAME*real_Y_SIZE_OF_FRAME;
 				}
 				DATA_SIZE=SIZE_OF_CSI-SIZE_OF_FPGA_HEAD;
-				CSI_Frame_Counts=(SIZE_OF_CSI/real_lenth)-2;
-				Display_per_frame=(Frame_rate/25)+1;			//cpu 一秒只能显示28帧
+				Display_per_frame=(Frame_rate/25)+1;			//cpu 一秒只能显示25帧
 				cout<<"real_lenth = "<<real_lenth<<endl;
-				cout<<"DATA_SIZE = "<<DATA_SIZE<<endl<<"CSI_Frame_Counts = "<<CSI_Frame_Counts<<endl<<"Display_per_frame = "<<Display_per_frame<<endl;
+				cout<<"DATA_SIZE = "<<DATA_SIZE<<endl<<"Display_per_frame = "<<Display_per_frame<<endl;
 				cout<<"**********************************************************************************"<<endl;;
 
 				break;  //!!!
@@ -467,10 +466,9 @@ int Csi::change_bits(){
 					real_lenth=real_X_SIZE_OF_FRAME*real_Y_SIZE_OF_FRAME;
 				}
 				DATA_SIZE=SIZE_OF_CSI-SIZE_OF_FPGA_HEAD;
-				CSI_Frame_Counts=(SIZE_OF_CSI/real_lenth)-2;
 				Display_per_frame=(Frame_rate/25)+1;			//cpu 一秒只能显示28帧
 				cout<<"real_lenth = "<<real_lenth<<endl;
-				cout<<"DATA_SIZE = "<<DATA_SIZE<<endl<<"CSI_Frame_Counts = "<<CSI_Frame_Counts<<endl<<"Display_per_frame = "<<Display_per_frame<<endl;
+				cout<<"DATA_SIZE = "<<DATA_SIZE<<endl<<"Display_per_frame = "<<Display_per_frame<<endl;
 				cout<<"**********************************************************************************"<<endl;;
 
 				break;  //!!!

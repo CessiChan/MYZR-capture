@@ -295,6 +295,29 @@ int main() {			//chengsi
 	int i;
 	printf("\ncsi_frame_head'size = %d\n",sizeof(csi_frame_head));
 	system("rm -rf /capture/hs_err_pid1*");
+	system("rm -rf /hs_err_pid1*");
+
+
+	//选定CSI大小
+	cout<<"Please Input SEND_X  and  SEND_Y"<<endl;
+//	while(cin>>SEND_X>>SEND_Y);
+	cin>>SEND_X>>SEND_Y;
+	if(SEND_X==1080){
+		system("sh /capture/csi_choose.sh 1080");
+	}else if(SEND_X==1920){
+		system("sh /capture/csi_choose.sh 1920");
+	}else if(SEND_X==3000){
+		system("sh /capture/csi_choose.sh 3000");
+	}else if(SEND_X==3360){
+		system("sh /capture/csi_choose.sh 3360");
+	}else if(SEND_X==3840){
+		system("sh /capture/csi_choose.sh 3840");
+	}
+
+	SIZE_OF_CSI=SEND_X*SEND_Y;
+
+
+
 
 #ifdef USE_LED
 	led_open();
@@ -355,7 +378,7 @@ int main() {			//chengsi
 	if(ret != 0){
 		goto exit_on_error;
 	}
-
+	display_buf=(unsigned char *)malloc(10*1024*1024);
 
 	// 创建一个alive线程 用于提示程序是否在正常工作
 

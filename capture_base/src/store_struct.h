@@ -20,9 +20,13 @@ extern unsigned int real_lenth;
 extern unsigned int DATA_SIZE;
 
 extern unsigned int Display_per_frame;
-extern unsigned int CSI_Frame_Counts;   //一个CSI内存块帧数
 extern int demo_mode_with_display;
 extern int is_real_time_display;
+
+
+extern unsigned int SIZE_OF_CSI;					//一个csi buf的大小
+extern unsigned int SEND_X;
+extern unsigned int SEND_Y;
 
 struct csi_frame_head{
 	unsigned int camera_num;			//0

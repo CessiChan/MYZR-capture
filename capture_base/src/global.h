@@ -11,10 +11,6 @@
 #define DMA_MEM_NUM				4
 
 #define MALLOC_NUM 				10
-#define PER_FILE_MAX_SIZE 		11289600
-#define SIZE_OF_CSI   			11289600					//一个csi buf的大小
-#define SEND_X					3360
-#define SEND_Y					3360
 #define capture_display_per_csi	2
 #define	SSD_SIZE				1.1
 

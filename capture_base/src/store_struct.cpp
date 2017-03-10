@@ -17,8 +17,12 @@ unsigned int real_FRAME_BPP=14;
 unsigned int real_lenth=360960;
 unsigned int DATA_SIZE=360924;
 
+
+unsigned int SIZE_OF_CSI=2073600;					//一个csi buf的大小
+unsigned int SEND_X=1440;
+unsigned int SEND_Y=1440;
+
 unsigned int Display_per_frame=1;
-unsigned int CSI_Frame_Counts=1;   //一个CSI内存块帧数
 
 
 int demo_mode_with_display=1;
